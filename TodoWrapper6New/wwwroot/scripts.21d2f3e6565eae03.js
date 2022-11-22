@@ -1,0 +1,1 @@
+window.MauiInterop={checkNumber:function(){const e=prompt("Enter a number:");DotNet.invokeMethodAsync("MauiAngularInterop","CheckNumber",parseInt(e)).then(n=>{alert(n)})},grabDeviceInfo:function(){DotNet.invokeMethodAsync("MauiAngularInterop","GetDeviceInfo").then(e=>{document.getElementById("device-result").innerHTML=e})}};

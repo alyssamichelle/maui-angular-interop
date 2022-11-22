@@ -1,0 +1,109 @@
+@import 'src/app/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+form {
+  margin-bottom: 50px;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.k-button-clear-base:active::after, .k-button-clear-base:focus::after {
+  background-color: $mid-blue !important;
+}
+
+button {
+  font-size: $zebra;
+  color: $primary-text;
+  border-color: $primary-text;
+
+  &:hover {
+    color: $secondary-bg;
+    border-color: $secondary-bg;
+  }
+}
+
+.hype-text {
+  font-family: 'Passion One', cursive;
+  text-shadow: 3px 3px 0 $color-secondary, 6px 6px 0 $color-tertiary,
+    9px 9px $color-quaternary, 12px 12px 0 $color-quinary;
+  font-weight: 400;
+  font-size: $whale;
+  text-align: center;
+  margin: 0;
+  color: $color-primary;
+  animation: shadows 1s cubic-bezier(.17,.67,.83,.67) infinite, move 1s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+@media (min-width: 360px) {
+  .hype-text {
+    font-size: 38px;
+  }
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 $color-secondary;
+  }
+  20% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary;
+  }
+  30% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary, 9px 9px $color-quaternary;
+  }
+  40% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary, 9px 9px $color-quaternary,
+      12px 12px 0 $color-quinary;
+  }
+  50% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary, 9px 9px $color-quaternary,
+      12px 12px 0 $color-quinary;
+  }
+  60% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary, 9px 9px $color-quaternary,
+      12px 12px 0 $color-quinary;
+  }
+  70% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary, 9px 9px $color-quaternary;
+  }
+  80% {
+    text-shadow: 3px 3px 0 $color-secondary,
+      6px 6px 0 $color-tertiary;
+  }
+  90% {
+    text-shadow: 3px 3px 0 $color-secondary;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -1,0 +1,52 @@
+<h1>Todo Today</h1>
+<h2>Angular v14 Application using Kendo UI</h2>
+<h3>Wrapped in .NET MAUI for deployment to multiple platforms.</h3>
+<!-- todo for form -->
+<!-- on 'enter' add item -->
+<!-- on button press add item -->
+<!-- on device shake undo typing -->
+<form>
+
+  <kendo-textbox type="text" placeholder="New todo item" #newItem name="itemName">
+    <ng-template kendoTextBoxPrefixTemplate>
+      <button kendoButton fillMode="clear" icon="login"></button>
+      <kendo-textbox-separator></kendo-textbox-separator>
+    </ng-template>
+    <ng-template kendoTextBoxSuffixTemplate>
+      <kendo-textbox-separator></kendo-textbox-separator>
+
+      <button kendoButton fillMode="clear" class="send-button" (click)="addItem(newItem.value); newItem.value = ''">Add</button>
+    </ng-template>
+  </kendo-textbox>
+
+
+
+</form>
+
+<section class="items-wrapper">
+  <item *ngFor="let item of list.slice().reverse()" [item]="item"></item>
+</section>
+
+<!-- to do for list -->
+<!-- edit, complete, delete actions -->
+<!-- drag and drop items to completed (off screen?) -->
+
+<app-notifications></app-notifications>
+
+<!-- figure out why error is not showing in notification -->
+<!-- then solve the http mysteries -->
+<!-- update to v14 -->
+<!-- figure out how to set v14 as system pref -->
+
+<section>
+  <kendo-card width="100%">
+    <kendo-card-header>
+      <h1>Interop-y Bits</h1>
+      <button (click)="getDeviceInfo()">Grab Device Info</button>
+    </kendo-card-header>
+    <kendo-card-body>
+      <h2>Device Info</h2>
+      <p id="device-result" class="hype-text"></p>
+    </kendo-card-body>
+  </kendo-card>
+</section>

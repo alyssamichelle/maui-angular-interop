@@ -1,0 +1,114 @@
+@import 'src/app/variables.scss';
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-size: $buffalo;
+}
+
+
+@media (min-width: 360px) {
+  body {
+    justify-content: start;
+  }
+
+  kendo-card {
+    margin-bottom: $dog;
+    min-width: 80% !important;
+  }
+
+  .k-input {
+    max-width: 80vw !important;
+  }
+
+  .k-input-md .k-input-inner, .k-button-text {
+    font-size: 14px !important;
+}
+}
+
+section {
+  display: block;
+  margin: $whale 0;
+}
+
+.k-card {
+  font-size: $squirrel;
+  min-width: 400px;
+
+  h1 {
+    font-size: $buffalo;
+    overflow-wrap: none;
+  }
+}
+.k-input {
+  max-width: 50vw;
+  border-color: $primary-text;
+
+
+  &.k-focus {
+    border-color: $secondary-bg;
+  }
+}
+
+input.k-input-inner {
+  color: $primary-text;
+}
+
+.k-input-md .k-input-inner, .k-button-text {
+  font-size: 44px;
+  padding: 0px 22px;
+}
+
+.k-input-separator {
+  height: 56px;
+}
+
+.k-button-text {
+  color: $primary-text
+}
+
+h1 {
+  font-size: $whale;
+  color: $deep-blue;
+  margin-bottom: $squirrel;
+  text-shadow:
+      0 1px 0px $light-blue,
+      1px 0 0px $mid-blue,
+      1px 2px 1px $light-blue,
+      2px 1px 1px $mid-blue,
+      2px 3px 2px $light-blue,
+      3px 2px 2px $mid-blue,
+      3px 4px 2px $light-blue,
+      4px 3px 3px $mid-blue,
+      4px 5px 3px $light-blue,
+      5px 4px 2px $mid-blue,
+      5px 6px 2px $light-blue,
+      6px 5px 2px $mid-blue,
+      6px 7px 1px $light-blue,
+      7px 6px 1px $mid-blue,
+      7px 8px 0px $light-blue;
+}
+
+h2, h3, h4 {
+  color: $deep-blue;
+  text-shadow: 0 1px 0 $light-blue;
+}
+
+h2 {
+  font-size: $squirrel;
+}
+
+h3 {
+  font-size: $chipmunk;
+}
+
+.k-notification-content {
+  font-size: $zebra;
+}
+
+// dupe styles for interop-y card, clean up later
+// interop-y card looks little diff
+.k-card {
+  box-shadow: 0.5rem 0.5rem $light-blue, -0.5rem -0.5rem $deep-blue;
+}
