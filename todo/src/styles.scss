@@ -8,22 +8,22 @@ body {
 }
 
 
-@media (min-width: 360px) {
+@media (max-width: 600px) {
   body {
     justify-content: start;
   }
 
-  kendo-card {
+  kendo-card.k-card {
     margin-bottom: $dog;
-    min-width: 80% !important;
+    min-width: 80%;
   }
 
-  .k-input {
-    max-width: 80vw !important;
+  kendo-textbox.k-input {
+    max-width: 80vw;
   }
 
-  .k-input-md .k-input-inner, .k-button-text {
-    font-size: 14px !important;
+  .k-input-md input.k-input-inner, span.k-button-text {
+    font-size: 14px;
 }
 }
 

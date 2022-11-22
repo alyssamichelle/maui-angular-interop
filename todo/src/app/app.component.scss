@@ -38,11 +38,12 @@ button {
   animation: shadows 1s cubic-bezier(.17,.67,.83,.67) infinite, move 1s cubic-bezier(.17,.67,.83,.67) infinite;
 }
 
-@media (min-width: 360px) {
+@media (max-width: 850px) {
   .hype-text {
     font-size: 38px;
   }
 }
+
 
 @keyframes shadows {
   0% {
