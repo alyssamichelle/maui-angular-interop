@@ -28,8 +28,8 @@ button {
 
 .hype-text {
   font-family: 'Passion One', cursive;
-  text-shadow: 3px 3px 0 $color-secondary, 6px 6px 0 $color-tertiary,
-    9px 9px $color-quaternary, 12px 12px 0 $color-quinary;
+  text-shadow: 3px 3px 0 $color-quinary, 6px 6px 0 $color-quaternary, 9px 9px $color-tertiary, 12px 12px 0 $color-secondary;
+  // text-shadow: 3px 3px 0 $color-secondary, 6px 6px 0 $color-tertiary, 9px 9px $color-quaternary, 12px 12px 0 $color-quinary;
   font-weight: 400;
   font-size: $whale;
   text-align: center;

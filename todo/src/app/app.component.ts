@@ -25,6 +25,18 @@ export class AppComponent implements OnInit {
     
   }
 
+  getThatBattery(): void {
+    this.mauiInterop.checkBattery();
+    // alert("getThatBattery called, yuh");
+  }
+
+  getThatNumber(): void {
+    this.mauiInterop.checkNumber().then((something) => {
+      // alert(something);
+      // this.ourNotificationService.add(something);
+    });
+  }
+
   getDeviceInfo(): void {
     this.mauiInterop.grabDeviceInfo().then((something) => {
       this.ourNotificationService.add(something);

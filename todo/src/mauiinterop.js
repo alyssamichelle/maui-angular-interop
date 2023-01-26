@@ -1,10 +1,16 @@
 ﻿window.MauiInterop = {
+    checkBattery: function () {
+        DotNet.invokeMethodAsync("TodoWrapper6New", "CheckBattery")
+            .then(result => {
+                alert(result);
+            });
+    },
     checkNumber: function () {
-    const number = prompt("Enter a number:");
-    DotNet.invokeMethodAsync("TodoWrapper6New", "CheckNumber", parseInt(number))
-        .then(result => {
-            alert(result);
-        });
+        const number = prompt("Enter a number:");
+        DotNet.invokeMethodAsync("TodoWrapper6New", "CheckNumber", parseInt(number))
+            .then(result => {
+                alert(result);
+            });
     },
     grabDeviceInfo: function () {
         return DotNet.invokeMethodAsync("TodoWrapper6New", "GetDeviceInfo")
